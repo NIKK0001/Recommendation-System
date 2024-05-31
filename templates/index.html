@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Recommendation System</h1>
+        
+        <div class="search-bar">
+            <form action="/" method="post">
+                <label for="movie">Enter a movie:</label>
+                <input type="text" id="movie" name="movie" required>
+                <button type="submit">Recommend</button>
+            </form>
+        </div>
+        {% if recommended_movies %}
+            <div class="results">
+                <h2>Movie Recommendations for "{{ movie }}"</h2>
+                <ul>
+                    {% for recommended_movie in recommended_movies %}
+                        <li>{{ recommended_movie }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        <div class="movie-gallery">
+            <h2>Popular Movies</h2>
+            <div class="row">
+                <div class="movie">
+                    <a href="https://www.imdb.com/title/tt0325980/">
+                        <img src="../static/images/Pirates-of-Caribbean.jpg" alt="Pirates-of-Caribbean">
+                        <p><strong>Pirates of the Caribbean</strong></p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="https://www.imdb.com/title/tt0499549/?ref_=fn_al_tt_1">
+                        <img src="../static/images/Avatar.jpg" alt="Avatar">
+                        <p><strong>Avatar</strong></p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="https://www.imdb.com/title/tt1345836/?ref_=fn_al_tt_1">
+                        <img src="../static/images/dark-knight-rises-poster.jpg" alt="Dark Knight Rises">
+                        <p><strong>Dark Knight Rises</strong></p>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="movie">
+                    <a href="https://www.imdb.com/title/tt2379713/?ref_=fn_al_tt_1">
+                        <img src="../static/images/Spectre.jpg" alt="Spectre">
+                        <p><strong>Spectre</strong></p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="https://www.imdb.com/title/tt0129280/?ref_=fn_al_tt_2">
+                        <img src="../static/images/The-out-ofTowners.jpg" alt="The Out-of-Towners">
+                        <p><strong>The Out-of-Towners</strong></p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="https://www.imdb.com/title/tt0995827/">
+                        <img src="../static/images/The-train.jpg" alt="The Train">
+                        <p><strong>The Train</strong></p>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="movie">
+                    <a href="https://www.imdb.com/title/tt0107290/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_Jurassic%2520Park">
+                        <img src="../static/images/Jurassic Park.jpg" alt="Jurassic Park">
+                        <p><strong>Jurassic Park</strong></p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="https://www.imdb.com/title/tt4154756/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_Avengers%2520Infinity%2520War">
+                        <img src="../static/images/Avengers Infinity War.jpg" alt="Avengers Infinity War">
+                        <p><strong>Avengers Infinity War</strong></p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="https://www.imdb.com/title/tt2395427/">
+                        <img src="../static/images/Avengers-Age Of Ultron.jpg" alt="Avengers-Age Of Ultron">
+                        <p><strong>Avengers-Age Of Ultron</strong></p>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="movie">
+                    <a href="https://www.imdb.com/title/tt1440129/">
+                        <img src="../static/images/Battleship.jpg" alt="Battleship">
+                        <p><strong>Battleship</strong></p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="https://www.imdb.com/title/tt1300854/">
+                        <img src="../static/images/Iron Man - 3.jpg" alt="Iron Man - 3">
+                        <p><strong>Iron Man - 3</strong></p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="https://www.imdb.com/title/tt0068646/">
+                        <img src="../static/images/The God Father.png" alt="The God Father">
+                        <p><strong>The God Father</strong></p>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="movie">
+                    <a href="https://www.imdb.com/title/tt0241527/">
+                        <img src="../static/images/Harry Potter.jpg" alt="Harry Potter">
+                        <p><strong>Harry Potter</strong></p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="https://www.imdb.com/title/tt1375666/">
+                        <img src="../static/images/Inception.jpg" alt="Inception">
+                        <p><strong>Inception</strong></p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="https://www.imdb.com/title/tt4849438/">
+                        <img src="../static/images/Bahubali-2.jpg" alt="Bahubali-2">
+                        <p><strong>Bahubali-2</strong></p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+</body>
+</html>
