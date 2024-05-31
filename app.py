@@ -5,7 +5,7 @@ import pandas as pd
 
 # Dynamically construct the absolute paths based on the script's location
 base_dir = os.path.dirname(os.path.abspath(__file__))
-movie_list_path = os.path.join(base_dir, 'movie_list.pkl')
+movie_list_path = os.path.join(base_dir, 'movie_list-2.pkl')
 similarity_path = os.path.join(base_dir, 'similarity.pkl')
 
 # Verify paths
